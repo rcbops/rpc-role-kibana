@@ -1,0 +1,18 @@
+---
+- include: kibana_pre_install.yml
+  tags:
+    - kibana-install
+
+- include: kibana_install.yml
+  tags:
+    - kibana-install
+
+- include: kibana_post_install.yml
+  tags:
+    - kibana-config
+    - kibana-install
+
+- include: kibana_dashboards.yml
+  tags:
+    - kibana-dashboard
+    - kibana-install

@@ -20,6 +20,12 @@
   tags:
     - kibana-install
 
+- name: Create Kibana configuration directory
+  file:
+    path: /opt/kibana/config
+    state: directory
+    mode: 0755
+
 - name: Deploy Kibana configuration files
   template:
     src: "kibana.yml"

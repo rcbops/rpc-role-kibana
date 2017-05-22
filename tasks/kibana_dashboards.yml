@@ -16,7 +16,7 @@
 - name: Guessing current kibana version
   shell: cat package.json | python -c 'import json,sys;obj=json.load(sys.stdin);print obj["version"];'
   args:
-    chdir: "/opt/kibana/"
+    chdir: "/usr/share/kibana/"
   register: kibana_version
   tags:
     - kibana-package-version

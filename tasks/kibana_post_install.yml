@@ -20,16 +20,10 @@
   tags:
     - kibana-install
 
-- name: Create Kibana configuration directory
-  file:
-    path: /opt/kibana/config
-    state: directory
-    mode: 0755
-
 - name: Deploy Kibana configuration files
   template:
     src: "kibana.yml"
-    dest: "/opt/kibana/config/kibana.yml"
+    dest: "/etc/kibana/kibana.yml"
     owner: "root"
     group: "root"
   notify: Restart Kibana
@@ -53,7 +47,7 @@
 
 - name: Wait for Kibana port
   wait_for:
-    host: "127.0.0.1"
+    host: "{{ ansible_host }}"
     port: "{{ kibana_app_port }}"
   tags:
     - kibana-install

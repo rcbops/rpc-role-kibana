@@ -47,7 +47,7 @@
 
 - name: Wait for Kibana port
   wait_for:
-    host: "{{ ansible_host }}"
+    host: "localhost"
     port: "{{ kibana_app_port }}"
   tags:
     - kibana-install

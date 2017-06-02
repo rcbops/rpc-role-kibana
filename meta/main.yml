@@ -31,4 +31,4 @@ galaxy_info:
 
 dependencies:
   - pip_install
-  - haproxy
+  - haproxy_server

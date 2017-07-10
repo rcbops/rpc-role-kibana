@@ -21,9 +21,9 @@
     - kibana-install
 
 - name: Ensure Kibana directory exists
-  directory:
+  file:
     path: "/etc/kibana"
-    state: "present"
+    state: directory
   tags:
     - kibana-install
 

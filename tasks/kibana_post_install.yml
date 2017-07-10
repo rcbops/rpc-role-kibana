@@ -20,6 +20,13 @@
   tags:
     - kibana-install
 
+- name: Ensure Kibana directory exists
+  directory:
+    path: "/etc/kibana"
+    state: "present"
+  tags:
+    - kibana-install
+
 - name: Deploy Kibana configuration files
   template:
     src: "kibana.yml"

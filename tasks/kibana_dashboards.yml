@@ -38,7 +38,8 @@
       what: '{"title" : "logstash-*",  "timeFieldName": "@timestamp"}'
     - where: "/config/{{ kibana_version.stdout }}"
       what: '{"defaultIndex" : "logstash-*"}'
-  tags:
+    tags:
+    - kibana-config
     - kibana-import
 
 - name: Uploading JSON configuration files
@@ -56,4 +57,5 @@
     - "visualization/*.json"
     - "dashboard/*.json"
   tags:
+    - kibana-config
     - kibana-rax-dashboard

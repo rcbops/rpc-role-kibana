@@ -20,6 +20,7 @@
   register: kibana_version
   tags:
     - kibana-package-version
+    - skip_ansible_lint
 
 - name: Import Kibana's LS index configuration in ES
   uri:

@@ -80,6 +80,7 @@
     - kibana-apache-modules
     - kibana-apache
     - kibana-install
+    - skip_ansible_lint
 
 - name: Template Kibana Apache Config
   template:

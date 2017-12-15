@@ -31,4 +31,6 @@ galaxy_info:
 
 dependencies:
   - pip_install
-  - haproxy_server
+  - role: haproxy_server
+    when:
+      - groups[haproxy_all] | length > 0

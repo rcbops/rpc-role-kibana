@@ -33,4 +33,4 @@ dependencies:
   - pip_install
   - role: haproxy_server
     when:
-      - groups[haproxy_all] | length > 0
+      - groups['haproxy_all'] | length > 0

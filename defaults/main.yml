@@ -1,5 +1,5 @@
 ---
-kibana_apt_repo_url: "https://artifacts.elastic.co/packages/5.x/apt"
+kibana_apt_repo_url: "https://artifacts.elastic.co/packages/6.x/apt"
 
 kibana_apt_repos:
   - { repo: "deb {{ kibana_apt_repo_url }} stable main", state: "present" }
